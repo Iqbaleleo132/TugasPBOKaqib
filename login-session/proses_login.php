@@ -9,6 +9,10 @@ $pass = $_POST['password'];
 
 $data = mysqli_query($host, "select * from user where username='$user' and password='$pass' ");
 
+while($split = mysqli_fetch_array($data)){
+    $role = $split['role']
+}
+
 $cek = mysqli_num_rows($data);
 
 if($cek > 0){
